@@ -48,8 +48,8 @@ module Jabber
         @stream.send_with_id(iq) { |answer|
           answer.query.each_element('item') do |item|
             nodes.push( {'node' => item.node,'name' => item.iname } )
-          }
-        end
+					end
+				}
         nodes
       end
 
